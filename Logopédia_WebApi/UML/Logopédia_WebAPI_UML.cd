@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Logopédia_WebApi.Controllers.DiagnozisokController" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAIQAAAAAAABBAAAAAAAAAAAIAAAQAAACAAAAAAAAI=</HashCode>
+      <FileName>Controllers\DiagnozisokController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.Controllers.EredmenyekController" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABBEBAAAAAgAAAABAAAAAAQAAAABAAAAA=</HashCode>
+      <FileName>Controllers\EredmenyekController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.Controllers.Gyerek_elerhetosegekController" Collapsed="true">
+    <Position X="3.25" Y="1.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAABAAAAAAAAABAAgAAAAIAIAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Gyerek_elerhetosegekController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.Controllers.GyerekekController" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAABAAAKgAAAASAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Controllers\GyerekekController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.Controllers.OvodakController" Collapsed="true">
+    <Position X="6.75" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAMAAIAAAAABAAAEABAAAAAAAAAAAAAACAAAAQAAAA=</HashCode>
+      <FileName>Controllers\OvodakController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.Controllers.SzakemberekController" Collapsed="true">
+    <Position X="9.75" Y="1.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEABAAAAAAAAACAAAAAAAQAAAAQABAAAAA=</HashCode>
+      <FileName>Controllers\SzakemberekController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.Controllers.TerapiakController" Collapsed="true">
+    <Position X="13" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABABCgAAAAAQAAAAEAAAAAAARAAQAAAA=</HashCode>
+      <FileName>Controllers\TerapiakController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.Controllers.TesztekController" Collapsed="true">
+    <Position X="10" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAQADAAAAAAAAAAAAAAAAAAAEAAAAAQAAAA=</HashCode>
+      <FileName>Controllers\TesztekController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.Models.Diagnozisok" Collapsed="true">
+    <Position X="3.25" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAIIAAAAAAAAAEAAAACAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Models\Diagnozisok.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.Models.Eredmenyek" Collapsed="true">
+    <Position X="5.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAQAgAEAAAIAAAAAAABBBAAAAAAACCAgAEARAAAQA=</HashCode>
+      <FileName>Models\Eredmenyek.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.Models.Gyerek_elerhetosegek" Collapsed="true">
+    <Position X="8" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAEAIAAAAEQAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Models\Gyerek_elerhetosegek.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.Models.Gyerekek" Collapsed="true">
+    <Position X="10.75" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAgAAIEAAgIAAIAAEAAAAAIAAgEAABAQAAAAA=</HashCode>
+      <FileName>Models\Gyerekek.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.Models.LogopediaContext" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAQAAAQAAAAAAABEAAAAQgACAAAAAQAAAA=</HashCode>
+      <FileName>Models\LogopediaContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.Models.Ovodak" Collapsed="true">
+    <Position X="6.75" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgIAAgAQAAAAAgEAAACAAAAAAAAAEQAAAAAAAAA=</HashCode>
+      <FileName>Models\Ovodak.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.Models.Szakemberek" Collapsed="true">
+    <Position X="13.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIIAAAAAABAAAAgAAAgAAAAAAAAAQAABBAAAAAAAAA=</HashCode>
+      <FileName>Models\Szakemberek.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.Models.Terapiak" Collapsed="true">
+    <Position X="10" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAABAAAAACBAAAAAAAAAAAQAEAgAEAAAAACA=</HashCode>
+      <FileName>Models\Terapiak.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.Models.Tesztek" Collapsed="true">
+    <Position X="2.5" Y="5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAIAAAEAAAAAAAAAACAAAgBAAAAAAAAEA=</HashCode>
+      <FileName>Models\Tesztek.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.DTOs.DiagnozisokDTO" Collapsed="true">
+    <Position X="4.5" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTOs\DiagnozisokDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WebApi.DTOs.OvodakDTO" Collapsed="true">
+    <Position X="8.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTOs\OvodakDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
