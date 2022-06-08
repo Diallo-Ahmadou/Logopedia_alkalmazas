@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Logopédia_WPF.ViewModels.AdatokViewModel" Collapsed="true">
+    <Position X="3.75" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAIAAAEAAACAAAAAgQEAAACAAAQgCAAAAAACEAAA=</HashCode>
+      <FileName>ViewModels\AdatokViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WPF.ViewModels.EredményekViewModel" Collapsed="true">
+    <Position X="10.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAACQAAAAAEAABAAAAAAIAAAAAAAACAAAA=</HashCode>
+      <FileName>ViewModels\EredményekViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WPF.ViewModels.KeresésViewModel" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAACACAACAAAABARAACAIAIgAAAAkgACAAAA=</HashCode>
+      <FileName>ViewModels\KeresésViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WPF.ViewModels.ListázásViewModel" Collapsed="true">
+    <Position X="3.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAACACAAAAAAABABAACAAAIAAAAAAgACAAAA=</HashCode>
+      <FileName>ViewModels\ListázásViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WPF.ViewModels.LoginViewModel" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAgAAAEACEAAEAAAAAAAQAQAAAQAASAAAA=</HashCode>
+      <FileName>ViewModels\LoginViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WPF.ViewModels.LogopédusViewModel" Collapsed="true">
+    <Position X="7.75" Y="3.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAECAACAAAAAAAEAAAAAAAAAEAAAAAASEAAA=</HashCode>
+      <FileName>ViewModels\LogopédusViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WPF.ViewModels.MainViewModel" Collapsed="true">
+    <Position X="6.75" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAAAQQAAAAAAAAEAABAAAAAAIoBAAAgAACAgIA=</HashCode>
+      <FileName>ViewModels\MainViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logopédia_WPF.ViewModels.SzakemberViewModel" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAACAAAAAAABBEAAAAIAAAEAAAEgASAAAA=</HashCode>
+      <FileName>ViewModels\SzakemberViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

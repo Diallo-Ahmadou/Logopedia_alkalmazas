@@ -1,0 +1,83 @@
+﻿<Window x:Class="Logopédia_WPF.Views.KeresésView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:input="clr-namespace:System.Windows.Controls;assembly=DotNetProjects.Input.Toolkit"
+        xmlns:local="clr-namespace:Logopédia_WPF.Views"
+        xmlns:vm="clr-namespace:Logopédia_WPF.ViewModels"
+        mc:Ignorable="d" Background="#10bbe6"
+        WindowStyle="None" ResizeMode="NoResize"  
+        WindowStartupLocation="CenterScreen" WindowState="Maximized" Height="713" Width="1719">
+
+    <Window.DataContext>
+        <vm:KeresésViewModel/>
+    </Window.DataContext>
+
+    <Border Background="#d4d3d3" CornerRadius="30" Margin="80">
+        <Border.BitmapEffect>
+            <DropShadowBitmapEffect Color="Black" Direction="320" ShadowDepth="13" Softness="0.4"/>
+        </Border.BitmapEffect>
+
+        <Grid>
+            <Grid.InputBindings>
+                <MouseBinding Gesture="LeftDoubleClick" Command="{Binding DataContext.SelectCommand,RelativeSource={RelativeSource FindAncestor, 
+                        AncestorType={x:Type Window}}}"  CommandParameter="{Binding}"/>
+            </Grid.InputBindings>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120" MinHeight="80"/>
+                <RowDefinition Height="40" MinHeight="40"/>
+                <RowDefinition Height="40" MinHeight="40"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Content="Keresés" Foreground="Black" HorizontalAlignment="Center" Margin="10" FontSize="50" FontWeight="ExtraBold" />
+
+            <Button Grid.Row="0" Command="{Binding BackCommand}" CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Background="#10bbe6" Style="{StaticResource MaterialDesignRaisedButton}" Content="Vissza" Width="85"  HorizontalAlignment="Left"
+              materialDesign:ButtonAssist.CornerRadius="15" Foreground="Black" FontWeight="ExtraBold" FontSize="15" Height="30" Margin="40 0" Cursor="Hand">
+                <Button.BitmapEffect>
+                    <DropShadowBitmapEffect Color="Black" Direction="320" ShadowDepth="13" Softness="0.4"/>
+                </Button.BitmapEffect>
+            </Button>
+
+            <TextBox Grid.Row="1" Text="{Binding SearchKey}" TextAlignment="Center" materialDesign:HintAssist.Hint="Írja be a keresett adatot!" Width="260" FontSize="18" FontWeight="Bold"/>
+
+            <Button Command="{Binding ShowDataCommand}" Grid.Row="1" Background="#10bbe6" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignRaisedButton}" Content="Keresés" Width="95" Margin="200 0"
+              materialDesign:ButtonAssist.CornerRadius="15" Foreground="Black" FontWeight="ExtraBold" FontSize="15" Height="30" Cursor="Hand">
+                <Button.BitmapEffect>
+                    <DropShadowBitmapEffect Color="Black" Direction="320" ShadowDepth="13" Softness="0.4"/>
+                </Button.BitmapEffect>
+            </Button>
+
+            <TextBlock Grid.Row="2" Text="{Binding Result}" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" TextWrapping="Wrap" OpacityMask="Crimson" Foreground="#FFE5572C" />
+
+            <DataGrid Grid.Row="3" ItemsSource="{Binding Gyerekek}"
+                      SelectedItem="{Binding SelectedGyerekek}"
+                      CanUserAddRows="False" 
+                      CanUserDeleteRows="False"
+                      IsReadOnly="True" 
+                      SelectionMode="Single"
+                      AutoGenerateColumns="False"
+                      ColumnWidth="*">
+                <DataGrid.Resources>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="FontSize" Value="12"/>
+                    </Style>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Gyerek neve" Binding="{Binding gyerek_neve}"/>
+                    <DataGridTextColumn Header="Oktatási azonosító" Binding="{Binding oktatasi_azonosito}"/>
+                    <DataGridTextColumn Header="Anyja neve" Binding="{Binding anyja_neve}"/>
+                    <DataGridTextColumn Header="Születési helye" Binding="{Binding szul_hely}"/>
+                    <DataGridTextColumn Header="Születési ideje" Binding="{Binding szul_ido, StringFormat='yyyy. MM. dd.'}"/>
+                    <DataGridTextColumn Header="Óvoda neve" Binding="{Binding ovodaIDNavigation.ovoda_neve}"/>
+                    <DataGridTextColumn Header="Óvoda telefonszáma" Binding="{Binding ovodaIDNavigation.ovoda_telszama}"/>
+                    <DataGridTextColumn Header="Gondviselő telefonszáma" Binding="{Binding elerhetosegIDNavigation.gondviselo_telefonszam}"/>
+                    <DataGridTextColumn x:Name="diagnozis" Header="Diagnózis megnevezése" Binding="{Binding diagnozisIDNavigation.diagnozis_megnevezese}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Border>
+</Window>

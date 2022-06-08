@@ -1,0 +1,138 @@
+﻿<Window x:Class="Logopédia_WPF.Views.AdatokView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Logopédia_WPF.Views"
+        xmlns:vm="clr-namespace:Logopédia_WPF.ViewModels"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" Background="#10bbe6" Height="671" Width="1295"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.DataContext>
+        <vm:AdatokViewModel />
+    </Window.DataContext>
+
+    <Border Background="#d4d3d3" CornerRadius="30" Margin="30">
+        <Border.BitmapEffect>
+            <DropShadowBitmapEffect Color="Black" Direction="320" ShadowDepth="13" Softness="0.4"/>
+        </Border.BitmapEffect>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Background="#d4d3d3">
+
+            <Label Content="A gyermek adatai" HorizontalAlignment="Center" Foreground="Black" Margin="10" FontSize="40" FontWeight="ExtraBold" />
+
+            <Separator Margin="120 0" Background="#10bbe6"></Separator>
+
+            <Grid Margin="20">
+                <Grid.Resources>
+                    <Style TargetType="Label">
+                        <Setter Property="FontSize" Value="15" />
+                        <Setter Property="FontWeight" Value="Heavy" />
+                    </Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="IsReadOnly" Value="True" />
+                        <Setter Property="FontSize" Value="15" />
+                        <Setter Property="FontWeight" Value="SemiBold" />
+                        <Setter Property="Background" Value="#d4d3d3" />
+                        <Setter Property="BorderThickness" Value="0" />
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                    </Style>
+                </Grid.Resources>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="160"/>
+                    <ColumnDefinition Width="190"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="175"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Oktatási azonosító:"/>
+                <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Gyerekek.oktatasi_azonosito}" x:Name="azonosito" />
+                <Label Grid.Row="1" Grid.Column="0" Content="A gyermek neve:"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Gyerekek.gyerek_neve}" x:Name="gyerekNeve"/>
+                <Label Grid.Row="2" Grid.Column="0" Content="Születési helye:"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Gyerekek.szul_hely}" x:Name="szul_hely"/>
+                <Label Grid.Row="3" Grid.Column="0" Content="Születési ideje:"/>
+                <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Gyerekek.szul_ido, StringFormat='yyyy. MM. dd.'}" x:Name="szul_ido"/>
+                <Label Grid.Row="4" Grid.Column="0" Content="Anyja neve:"/>
+                <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Gyerekek.anyja_neve}" x:Name="anyjaNeve"/>
+                <Label Grid.Row="5" Grid.Column="0" Content="Lakcíme:"/>
+                <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding Gyerekek.elerhetosegIDNavigation.gondviselo_lakcim}" x:Name="lakcim" HorizontalScrollBarVisibility="Auto"/>
+                <Label Grid.Row="0" Grid.Column="3" Content="Óvoda neve:"/>
+                <TextBox x:Name="ovodaNeve" Grid.Row="0" Grid.Column="4" Text="{Binding Gyerekek.ovodaIDNavigation.ovoda_neve}"/>
+                <ComboBox x:Name="ovodaCombo" Grid.Row="0" Grid.Column="4" 
+                          Visibility="Hidden"
+                          ItemsSource="{Binding Ovodak}"
+                          SelectedItem="{Binding Gyerekek.ovodaIDNavigation}"
+                          DisplayMemberPath="ovoda_neve"                  
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                          FontSize="15" 
+                          FontWeight="SemiBold"
+                          Background="#d4d3d3"
+                          BorderThickness="0"
+                          HorizontalContentAlignment="Center"
+                          IsEditable="False" />
+                <Label Grid.Row="1" Grid.Column="3" Content="Óvoda telefonszáma:"/>
+                <TextBox Grid.Row="1" Grid.Column="4" Text="{Binding Gyerekek.ovodaIDNavigation.ovoda_telszama}" x:Name="ovodaSzama"/>
+                <Label Grid.Row="2" Grid.Column="3" Content="Gondviselő neve:"/>
+                <TextBox Grid.Row="2" Grid.Column="4" Text="{Binding Gyerekek.elerhetosegIDNavigation.gondviselő_neve}" x:Name="gondviseloNeve" />
+                <Label Grid.Row="3" Grid.Column="3" Content="Gondviselő telefonszáma: "/>
+                <TextBox Grid.Row="3" Grid.Column="4" Text="{Binding Gyerekek.elerhetosegIDNavigation.gondviselo_telefonszam}" x:Name="gondviseloSzama" />
+                <Label Grid.Row="4" Grid.Column="3" Content="Diagnózis megnevezése:"/>
+                <TextBox Grid.Row="4" Grid.Column="4" Text="{Binding Gyerekek.diagnozisIDNavigation.diagnozis_megnevezese}" HorizontalScrollBarVisibility="Auto" x:Name="diagnozisNeve"/>
+                <ComboBox x:Name="diagnozisCombo" Grid.Row="4" Grid.Column="4" 
+                          Visibility="Hidden"
+                          ItemsSource="{Binding Diagnozisok}"
+                          SelectedItem="{Binding Gyerekek.diagnozisIDNavigation}"
+                          DisplayMemberPath="diagnozis_megnevezese"        ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                          FontSize="15" 
+                          FontWeight="SemiBold"
+                          Background="#d4d3d3"
+                          BorderThickness="0"
+                          HorizontalContentAlignment="Center"
+                          />
+                <Label Grid.Row="5" Grid.Column="3" Content="Diagnózis dátuma:"/>
+                <TextBox Grid.Row="5" Grid.Column="4" Text="{Binding Gyerekek.diagnozis_adas_datuma, StringFormat='yyyy. MM. dd.'}" x:Name="diagnozisDatuma"/>
+                <DatePicker Grid.Row="5" Grid.Column="4" x:Name="datum"
+                          Visibility="Hidden"                         
+                          IsTodayHighlighted="True"
+                          FontSize="15" 
+                          FontWeight="SemiBold"
+                          Background="#d4d3d3"
+                          BorderThickness="0"
+                          HorizontalContentAlignment="Center" />
+            </Grid>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="Edit" Background="#10bbe6" Style="{StaticResource MaterialDesignRaisedButton}" Content="Szerkesztés" Width="125" materialDesign:ButtonAssist.CornerRadius="15" Foreground="Black" FontWeight="ExtraBold" FontSize="15" Height="30" Margin="60 20" Cursor="Hand" Click="Edit_Click">
+                    <Button.BitmapEffect>
+                        <DropShadowBitmapEffect Color="Black" Direction="320" ShadowDepth="13" Softness="0.4"/>
+                    </Button.BitmapEffect>
+                </Button>
+                <Button Command="{Binding SaveCommand}" Background="#10bbe6" Style="{StaticResource MaterialDesignRaisedButton}" Content="Mentés" Width="125" materialDesign:ButtonAssist.CornerRadius="15" Foreground="Black" FontWeight="ExtraBold" FontSize="15" Height="30" Margin="60 20" Cursor="Hand">
+                    <Button.BitmapEffect>
+                        <DropShadowBitmapEffect Color="Black" Direction="320" ShadowDepth="13" Softness="0.4"/>
+                    </Button.BitmapEffect>
+                </Button>
+                <Button Command="{Binding CloseCommand}" CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Background="DarkGray" Style="{StaticResource MaterialDesignRaisedButton}" Content="Bezárás" Width="125" materialDesign:ButtonAssist.CornerRadius="15" Foreground="Black" FontWeight="ExtraBold" FontSize="15" Height="30" Margin="60 20" Cursor="Hand">
+                    <Button.BitmapEffect>
+                        <DropShadowBitmapEffect Color="Black" Direction="320" ShadowDepth="13" Softness="0.4"/>
+                    </Button.BitmapEffect>
+                </Button>
+            </StackPanel>
+
+            <TextBlock Text="{Binding SaveMessage}" Margin="5" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" TextWrapping="Wrap" OpacityMask="Crimson" Foreground="#FFE5572C" />
+
+        </StackPanel>
+
+    </Border>
+
+</Window>
